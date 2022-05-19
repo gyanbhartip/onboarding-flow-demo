@@ -1,0 +1,8 @@
+.url-container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+input:disabled::placeholder {
+    color: #999;
+}

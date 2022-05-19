@@ -1,0 +1,67 @@
+.text-primary {
+    font-size: 1.65rem;
+    font-weight: 800;
+    padding: 0.5rem 0;
+}
+
+.text-secondary {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #888;
+    padding: 0.5rem 0 2.5rem 0;
+}
+
+.text-other {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+form {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+input[type="text"], input[type="url"] {
+    height: 3.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+}
+
+::placeholder {
+    color: #ccc;
+    font-weight: 500;
+}
+
+label {
+    color: #6a6a6a;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+button {
+    width: 100%;
+}
+
+.btn {
+    border: 1px solid #664de5;
+    border-radius: 7px;
+    background-color: #664de5;
+    color: #fff;
+    text-align: center;
+    padding: 0.85rem;
+}
+
+.btn:hover {
+    background-color: #664de5ee;
+}

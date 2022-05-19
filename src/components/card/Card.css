@@ -1,0 +1,46 @@
+.card-container {
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    margin: 4vh 0;
+    width: 200px;
+    height: 200px;
+    transition: all 0.25s ease-in-out;
+}
+
+@media screen and (min-width: 640px) {
+    .card-container {
+        width: 225px;
+        height: 225px;
+    }
+}
+
+.card-container:hover {
+    border-color: #664de5;
+}
+
+.card-container:hover svg {
+    color: #664de5;
+}
+
+.card-inner-container {
+    height: 90%;
+    margin: 0.5rem 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.logo-wrapper {
+    max-width: 1.75rem;
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+.card-desc {
+    font-weight: 400;
+    color: #888;
+    max-width: 15ch;
+}
