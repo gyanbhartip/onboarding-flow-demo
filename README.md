@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1e38e7f7-3e18-4f86-9b15-215b95b3a80b/deploy-status)](https://app.netlify.com/sites/onboarding-flow-demo-1gb/deploys)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
