@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from "react";
+import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import { useGlobalContext } from "../../utils/context/Context";
 import "./OutletContainer.css";
