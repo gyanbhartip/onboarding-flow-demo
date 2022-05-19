@@ -8,7 +8,6 @@ const initialState = {
 };
 
 const AppProvider = ({ children }) => {
-  const [, forceUpdate] = useReducer((x) => x + 1, 0);
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const setProgress = (progress) => {
@@ -24,7 +23,6 @@ const AppProvider = ({ children }) => {
       setProgress(100);
     } else {
       setProgress(17);
-      setTimeout(() => forceUpdate(), 0);
     }
   };
 
@@ -33,7 +31,6 @@ const AppProvider = ({ children }) => {
       value={{
         ...state,
         setProgress,
-        forceUpdate,
         updateProgress,
       }}
     >

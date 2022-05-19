@@ -8,6 +8,7 @@ const OutletContainer = () => {
 
   useEffect(() => {
     updateProgress();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

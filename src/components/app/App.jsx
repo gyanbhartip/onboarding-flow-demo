@@ -1,10 +1,10 @@
-import "./App.css";
+import { Link } from "react-router-dom";
+import { ProgressBar, Step } from "react-step-progress-bar";
 import "react-step-progress-bar/styles.css";
 import Logo from "../../assets/images/logo.png";
-import { ProgressBar, Step } from "react-step-progress-bar";
-import { Link } from "react-router-dom";
-import OutletContainer from "../outlet-container/OutletContainer";
 import { useGlobalContext } from "../../utils/context/Context";
+import OutletContainer from "../outlet-container/OutletContainer";
+import "./App.css";
 
 function App() {
   const { progress, setProgress } = useGlobalContext();
