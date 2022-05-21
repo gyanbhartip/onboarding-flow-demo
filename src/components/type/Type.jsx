@@ -5,10 +5,14 @@ import Card from "../card/Card";
 import "./Type.css";
 
 const Type = () => {
-  const { selectedType,navigate } = useGlobalContext();
+  const { selectedType, navigate } = useGlobalContext();
 
   return (
-    <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
+    <motion.div
+      initial={{ width: 0, display: "none" }}
+      animate={{ width: "100%", display: "contents" }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
+    >
       <p className="text-primary">How are you planning to use Eden?</p>
       <p className="text-secondary">
         We'll streamline your setup experience accordingly.
