@@ -1,19 +1,17 @@
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../../utils/context/Context";
 import "./Workspace.css";
 
 const Workspace = () => {
-  const { setProgress } = useGlobalContext();
-  const navigate = useNavigate();
+  const { navigate } = useGlobalContext();
 
   return (
-    <motion.div>
+    <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
       <p className="text-primary">Let's set up a home for all of your work</p>
       <p className="text-secondary">
         You can always create another workspace later.
       </p>
-      <form action="">
+      <form>
         <div className="form-group">
           <label htmlFor="wname">Workspace Name</label>
           <input type="text" id="wname" placeholder="Eden" />
@@ -26,8 +24,6 @@ const Workspace = () => {
           <div className="url-container">
             <input
               type="text"
-              name=""
-              id=""
               disabled
               placeholder="www.eden.com/"
             />
@@ -36,10 +32,7 @@ const Workspace = () => {
         </div>
         <button
           className="btn"
-          onClick={() => {
-            setProgress(83);
-            navigate("/type");
-          }}
+          onClick={() => navigate("/type")}
         >
           Create Workspace
         </button>

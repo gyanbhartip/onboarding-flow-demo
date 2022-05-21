@@ -1,11 +1,12 @@
-import React, { useContext, useReducer } from "react";
+import {createContext, useContext, useReducer } from "react";
 import reducer from "./Reducer";
 
-const AppContext = React.createContext();
+const AppContext = createContext();
 
 const initialState = {
   progress: 17,
   selectedType: "",
+  navigate:null,
 };
 
 const AppProvider = ({ children }) => {
@@ -32,6 +33,10 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "SET_SELECTED_TYPE", selectedType });
   };
 
+  const setNavigate = (navigate)=>{
+    dispatch({type:"SET_NAVIGATE", navigate});
+  }
+
   return (
     <AppContext.Provider
       value={{
@@ -39,6 +44,7 @@ const AppProvider = ({ children }) => {
         setProgress,
         updateProgress,
         setSelectedType,
+        setNavigate,
       }}
     >
       {children}

@@ -1,14 +1,13 @@
-import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import { useGlobalContext } from "../../utils/context/Context";
 
 const User = () => {
-  const { setProgress } = useGlobalContext();
-  const navigate = useNavigate();
+  const { navigate } = useGlobalContext();
   return (
-    <>
+    <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
       <p className="text-primary">Welcome! First things first...</p>
       <p className="text-secondary">You can always change them later.</p>
-      <form action="">
+      <form>
         <div className="form-group">
           <label htmlFor="fname">Full Name</label>
           <input type="text" id="fname" placeholder="Steve Jobs" />
@@ -19,15 +18,12 @@ const User = () => {
         </div>
         <button
           className="btn"
-          onClick={() => {
-            setProgress(50);
-            navigate("/workspace");
-          }}
+          onClick={() => navigate("/workspace")}
         >
           Create Workspace
         </button>
       </form>
-    </>
+    </motion.div>
   );
 };
 

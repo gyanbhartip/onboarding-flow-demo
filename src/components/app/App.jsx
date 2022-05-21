@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { ProgressBar, Step } from "react-step-progress-bar";
 import "react-step-progress-bar/styles.css";
 import Logo from "../../assets/images/logo.png";
@@ -7,17 +8,18 @@ import OutletContainer from "../outlet-container/OutletContainer";
 import "./App.css";
 
 function App() {
-  const { progress, setProgress } = useGlobalContext();
+  const navigate = useNavigate();
+  const { progress, setNavigate } = useGlobalContext();
+
+  useEffect(()=>{
+    setNavigate(navigate);
+  },[]);
+
   return (
     <div className="app-main">
-      <Link
-        to="/"
-        onClick={() => {
-          setProgress(17);
-        }}
-      >
+      <Link to="/">
         <header className="app-header">
-          <img src={Logo} alt="" />
+          <img src={Logo} alt="logo" />
           <h1>Eden</h1>
         </header>
       </Link>

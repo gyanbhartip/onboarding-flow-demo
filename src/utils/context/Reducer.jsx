@@ -5,10 +5,18 @@ const reducer = (state, action) => {
       progress: action.progress,
     };
   }
+
   if (action.type === "SET_SELECTED_TYPE") {
     return {
       ...state,
       selectedType: action.selectedType,
+    };
+  }
+
+  if (action.type === "SET_NAVIGATE") {
+    return {
+      ...state,
+      navigate: action.navigate,
     };
   }
 };
