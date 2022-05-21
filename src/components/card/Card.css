@@ -15,10 +15,18 @@
 }
 
 .card-container:hover {
-    border-color: #664de5;
+    border-color: #664de588;
 }
 
 .card-container:hover svg {
+    color: #664de5bb;
+}
+
+.cards-container .card-selected {
+    border-color: #664de5;
+}
+
+.cards-container .card-selected svg {
     color: #664de5;
 }
 

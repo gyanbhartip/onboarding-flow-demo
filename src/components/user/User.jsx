@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../../utils/context/Context";
 
 const User = () => {
   const { setProgress } = useGlobalContext();
+  const navigate = useNavigate();
   return (
     <>
       <p className="text-primary">Welcome! First things first...</p>
@@ -16,11 +17,15 @@ const User = () => {
           <label htmlFor="dname">Display Name</label>
           <input type="text" id="dname" placeholder="Steve" />
         </div>
-        <Link to="/workspace">
-          <div className="btn" onClick={() => setProgress(50)}>
-            Create Workspace
-          </div>
-        </Link>
+        <button
+          className="btn"
+          onClick={() => {
+            setProgress(50);
+            navigate("/workspace");
+          }}
+        >
+          Create Workspace
+        </button>
       </form>
     </>
   );

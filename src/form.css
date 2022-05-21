@@ -65,3 +65,9 @@ button {
 .btn:hover {
     background-color: #664de5ee;
 }
+
+.btn:disabled {
+    background-color: #ddd;
+    color: #6a6a6a;
+    border-color: #ddd;
+}

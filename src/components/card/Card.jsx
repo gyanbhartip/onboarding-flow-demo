@@ -1,9 +1,14 @@
 import "./Card.css";
 import { MyselfIcon, TeamIcon } from "../../utils/Icons";
+import { useGlobalContext } from "../../utils/context/Context";
 
-const Card = ({ header, desc }) => {
+const Card = ({ id, desc, header }) => {
+  const { selectedType, setSelectedType } = useGlobalContext();
   return (
-    <div className="card-container">
+    <div
+      className={`card-container ${selectedType === id ? "card-selected" : ""}`}
+      onClick={() => setSelectedType(id)}
+    >
       <div className="card-inner-container">
         <div className="logo-wrapper">
           {header === "For myself" ? <MyselfIcon /> : <TeamIcon />}

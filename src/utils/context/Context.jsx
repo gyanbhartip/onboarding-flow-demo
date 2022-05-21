@@ -5,6 +5,7 @@ const AppContext = React.createContext();
 
 const initialState = {
   progress: 17,
+  selectedType: "",
 };
 
 const AppProvider = ({ children }) => {
@@ -13,6 +14,7 @@ const AppProvider = ({ children }) => {
   const setProgress = (progress) => {
     dispatch({ type: "SET_PROGRESS", progress });
   };
+
   const updateProgress = () => {
     const addr = window.location.href;
     if (addr.includes("/workspace")) {
@@ -26,12 +28,17 @@ const AppProvider = ({ children }) => {
     }
   };
 
+  const setSelectedType = (selectedType) => {
+    dispatch({ type: "SET_SELECTED_TYPE", selectedType });
+  };
+
   return (
     <AppContext.Provider
       value={{
         ...state,
         setProgress,
         updateProgress,
+        setSelectedType,
       }}
     >
       {children}

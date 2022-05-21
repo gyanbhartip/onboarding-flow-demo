@@ -5,6 +5,12 @@ const reducer = (state, action) => {
       progress: action.progress,
     };
   }
+  if (action.type === "SET_SELECTED_TYPE") {
+    return {
+      ...state,
+      selectedType: action.selectedType,
+    };
+  }
 };
 
 export default reducer;
