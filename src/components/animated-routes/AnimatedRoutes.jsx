@@ -9,7 +9,7 @@ import Workspace from "../workspace/Workspace";
 const AnimatedRoutes = () => {
   const location = useLocation();
   return (
-    <AnimatePresence>
+    <AnimatePresence initial={false} exitBeforeEnter>
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<App />}>
           <Route index element={<User />} />

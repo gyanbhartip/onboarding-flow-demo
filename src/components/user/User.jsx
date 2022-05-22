@@ -5,9 +5,9 @@ const User = () => {
   const { navigate } = useGlobalContext();
   return (
     <motion.div
-      initial={{ width: 0, display: "none" }}
-      animate={{ width: "100%", display: "contents" }}
-      exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
       <p className="text-primary">Welcome! First things first...</p>
       <p className="text-secondary">You can always change them later.</p>
