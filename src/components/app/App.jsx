@@ -11,9 +11,10 @@ function App() {
   const navigate = useNavigate();
   const { progress, setNavigate } = useGlobalContext();
 
-  useEffect(()=>{
+  useEffect(() => {
     setNavigate(navigate);
-  },[]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="app-main">
