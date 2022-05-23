@@ -11,11 +11,6 @@
     padding: 0.5rem 0 2.5rem 0;
 }
 
-.text-other {
-    font-size: 1rem;
-    color: #ddd;
-}
-
 form {
     margin: 0 auto;
     display: flex;
