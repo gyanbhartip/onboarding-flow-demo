@@ -20,7 +20,7 @@ function App() {
     <div className="app-main">
       <Link to="/">
         <header className="app-header">
-          <img src={Logo} alt="logo" />
+          <img src={Logo} alt="logo" className="logo-img" />
           <h1>Eden</h1>
         </header>
       </Link>

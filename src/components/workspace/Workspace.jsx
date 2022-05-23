@@ -23,7 +23,7 @@ const Workspace = () => {
         <div className="form-group">
           <label htmlFor="wurl">
             Workspace URL
-            <span className="text-other"> (optional)</span>
+            <span className="text-secondary"> (optional)</span>
           </label>
           <div className="url-container">
             <input type="text" disabled placeholder="www.eden.com/" />
