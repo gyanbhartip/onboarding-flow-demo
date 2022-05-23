@@ -1,21 +1,24 @@
 import { AnimatePresence } from "framer-motion";
+import { lazy } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import App from "../app/App";
-import Finish from "../finish/Finish";
-import Type from "../type/Type";
 import User from "../user/User";
-import Workspace from "../workspace/Workspace";
+
+const FinishComponent = lazy(() => import("../finish/Finish"));
+const TypeComponent = lazy(() => import("../type/Type"));
+const WorkspaceComponent = lazy(() => import("../workspace/Workspace"));
 
 const AnimatedRoutes = () => {
   const location = useLocation();
+
   return (
     <AnimatePresence initial={false} exitBeforeEnter>
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<App />}>
           <Route index element={<User />} />
-          <Route path="/workspace" element={<Workspace />} />
-          <Route path="/type" element={<Type />} />
-          <Route path="/finish" element={<Finish />} />
+          <Route path="/workspace" element={<WorkspaceComponent />} />
+          <Route path="/type" element={<TypeComponent />} />
+          <Route path="/finish" element={<FinishComponent />} />
         </Route>
       </Routes>
     </AnimatePresence>
