@@ -1,9 +1,9 @@
 import { AnimatePresence } from "framer-motion";
-import { Suspense, lazy } from "react";
+import { lazy, Suspense } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import App from "../app/App";
+import Spinner from "../spinner/Spinner";
 import User from "../user/User";
-
 const Finish = lazy(() => import("../finish/Finish"));
 const Type = lazy(() => import("../type/Type"));
 const Workspace = lazy(() => import("../workspace/Workspace"));
@@ -19,7 +19,7 @@ const AnimatedRoutes = () => {
           <Route
             path="/workspace"
             element={
-              <Suspense fallback={<h3>...</h3>}>
+              <Suspense fallback={<Spinner />}>
                 <Workspace />
               </Suspense>
             }
@@ -27,7 +27,7 @@ const AnimatedRoutes = () => {
           <Route
             path="/type"
             element={
-              <Suspense fallback={<h3>...</h3>}>
+              <Suspense fallback={<Spinner />}>
                 <Type />
               </Suspense>
             }
@@ -35,7 +35,7 @@ const AnimatedRoutes = () => {
           <Route
             path="/finish"
             element={
-              <Suspense fallback={<h3>...</h3>}>
+              <Suspense fallback={<Spinner />}>
                 <Finish />
               </Suspense>
             }
